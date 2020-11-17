@@ -1,0 +1,17 @@
+= Skupper Getting Started
+
+Perform the Skupper getting started tutorial quickly in VS Code.
+
+.Requirements
+
+* VS Code
+* https://marketplace.visualstudio.com/items?itemName=redhat.vscode-didact[Didact extension]
+
+.Procedure
+
+. Clone this repo.
+
+. Right click on the `skupper.didact.adoc` file and choose *Didact: Start Didact tutorial from file*.
+
+. Complete the steps in the document.
+

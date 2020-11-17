@@ -1,0 +1,146 @@
+//
+// tag::expose-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$kubectl%20expose%20deployment%20hello-world-frontend%20--port%208080%20--type%20LoadBalancer++[Expose-west]
+
+
+// end::expose-west[]
+// tag::expose-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$skupper%20expose%20deployment%20hello-world-backend%20--port%208080%20--protocol%20http++[Expose-east]
+
+
+// end::expose-east[]
+// tag::deploy-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$kubectl%20create%20deployment%20hello-world-backend%20--image%20quay.io%2Fskupper%2Fhello-world-backend++[Deploy-east]
+
+
+// end::deploy-east[]
+// tag::deploy-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$kubectl%20create%20deployment%20hello-world-frontend%20--image%20quay.io%2Fskupper%2Fhello-world-frontend++[Deploy-west]
+
+
+// end::deploy-west[]
+// tag::token-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$skupper%20connect%20%24HOME%2Fsecret.yaml++[Token-east]
+
+
+// end::token-east[]
+// tag::token-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$skupper%20connection-token%20%24HOME%2Fsecret.yaml++[Token-west]
+
+
+// end::token-west[]
+// tag::init-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$skupper%20init%20--cluster-local++[Init-east]
+
+
+// end::init-east[]
+// tag::init-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$skupper%20init++[Init-west]
+
+
+// end::init-west[]
+// tag::status-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$skupper%20status++[Status-east]
+
+
+// end::status-east[]
+// tag::status-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$skupper%20status++[Status-west]
+
+
+// end::status-west[]
+// tag::namespace-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$kubectl%20create%20namespace%20east%3B%20kubectl%20config%20set-context%20--current%20--namespace%20east++[Namespace-east]
+
+
+// end::namespace-east[]
+// tag::namespace-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$kubectl%20create%20namespace%20west%3B%20kubectl%20config%20set-context%20--current%20--namespace%20west++[Namespace-west]
+
+
+// end::namespace-west[]
+// tag::kubeconfig-east[]
+// East
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=East$$export%20KUBECONFIG%3D%24HOME%2F.kube%2Fconfig-east++[Kubeconfig-east]
+
+
+// end::kubeconfig-east[]
+// tag::kubeconfig-west[]
+// West
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=West$$export%20KUBECONFIG%3D%24HOME%2F.kube%2Fconfig-west++[Kubeconfig-west]
+
+
+// end::kubeconfig-west[]
+// tag::skupper-version[]
+// setup
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=setup$$skupper%20--version++[Skupper-version]
+
+
+// end::skupper-version[]
+// tag::mac-install[]
+// setup
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=setup$$curl%20-fL%20https%3A%2F%2Fgithub.com%2Fskupperproject%2Fskupper%2Freleases%2Fdownload%2F0.3.2%2Fskupper-cli-0.3.2-mac-amd64.tgz%20%7C%20tar%20-xzf%20-++[Mac-install]
+
+
+// end::mac-install[]
+// tag::linux-install[]
+// setup
+
+
+icon:cogs[] link:++didact://?commandId=vscode.didact.sendNamedTerminalAString&text=setup$$curl%20-fL%20https%3A%2F%2Fgithub.com%2Fskupperproject%2Fskupper%2Freleases%2Fdownload%2F0.3.2%2Fskupper-cli-0.3.2-linux-amd64.tgz%20%7C%20tar%20-xzf%20-++[Linux-install]
+
+
+// end::linux-install[]
+// tag::check-kubectl[]
+
+icon:cog[] link:didact://?commandId=vscode.didact.cliCommandSuccessful&text=kubectl-requirements-status$$kubectl[Check if the kubectl command line is available]
+
+
+[[kubectl-requirements-status]]
+_Status: unknown_
+
+// end::check-kubectl[]
